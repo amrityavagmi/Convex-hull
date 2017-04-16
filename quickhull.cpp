@@ -82,7 +82,9 @@ void solve(pii p1,pii p2,int num)
 int main()
 {
     ios::sync_with_stdio(0);
+    cout<<"enter the number of points\n";
     cin>>n;
+    cout<<"enter the points\n";
     for(int i=0;i<n;i++)
     	cin>>a[i].F>>a[i].S;
     int min_x=0,max_x=0;
@@ -96,6 +98,7 @@ int main()
     /*cout<<min_x<<" "<<max_x<<endl;
     cout<<side(m_p(0,0),m_p(0,3),m_p(-1,-1));*/
     //solve(m_p(0,0),m_p(0,3),-1);
+    cout<<"the points in convex hull are:\n";
     solve(a[min_x],a[max_x],1);
     solve(a[min_x],a[max_x],-1);
     while(!hull.empty())
